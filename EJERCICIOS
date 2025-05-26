@@ -1,0 +1,325 @@
+#############
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "Primer script de php";
+?> 
+
+</body>
+</html>
+
+#############
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$txt = "PHP";
+echo "Me gusta PHP!";
+?>
+
+</body>
+</html>
+
+###########
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Mi primera pagina de PHP</h1>
+
+<?php
+echo "Hola mundo!";
+?> 
+
+</body>
+</html>
+
+#################
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+ECHO "Hola mundo!<br>";
+echo "Hola mundo!<br>";
+EcHo "Hola mundo!<br>";
+?> 
+
+</body>
+</html>
+
+############
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$color = "rojo";
+echo "Mi patin es " . $color . "<br>";
+echo "Mi departamento es " . $COLOR . "<br>";
+echo "Mi carro es " . $coLOR . "<br>";
+?> 
+
+</body>
+</html>
+
+
+#########
+
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<?php
+// Comentario ejemplo
+
+# Esto es otro ejemplo de comentario
+
+/* Eejemplo de
+comentario de varias lineas*/
+?>
+ 
+</body>
+</html>
+
+#############
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "Bienvenido!"; // Imprime un mensaje
+?>
+ 
+</body>
+</html>
+
+###############
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+echo "Hello";
+print "Hello";
+?>
+
+</body>
+</html>
+
+
+##########
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$a = 5;
+$b = 5.34;
+$c = "25";
+
+var_dump($a);
+echo "<br>";
+var_dump($b);
+echo "<br>";
+var_dump($c);
+?> 
+
+<p>Line breaks were added for better readability.</p>
+
+</body>
+</html>
+
+#########
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$x = 5985;
+var_dump(is_int($x));
+
+echo "<br>";
+
+
+$x = 59.85;
+var_dump(is_int($x));
+?>  
+
+</body>
+</html>
+
+
+##########
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+$x = 23465.768;
+$int_cast = (int)$x;
+echo $int_cast;
+  
+echo "<br>";
+
+// Cast string to int$x = "23465.768";
+$int_cast = (int)$x;
+echo $int_cast;
+?>  
+
+</body>
+</html>
+
+#########
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php 
+$x = "Hello world!";
+$y = 'Hello world!';
+
+var_dump($x);
+echo "<br>"; 
+var_dump($y);
+?>
+
+</body>
+</html>
+
+########
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+class Car {
+  public $color;
+  public $model;
+  public function __construct($color, $model) {
+    $this->color = $color;
+    $this->model = $model;
+  }
+  public function message() {
+    return "My car is a " . $this->color . " " . $this->model . "!";
+  }
+}
+
+$myCar = new Car("red", "Volvo");
+var_dump($myCar);
+?>
+
+</body>
+</html>
+
+#######
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+</head>
+
+<body>
+    <select>
+        <?php
+
+        for ($i=1; $i <= 10 ; $i++) {
+            echo '<option value="'.$i.'">'.$i.'</option>';
+        }
+
+        ?>
+    </select>
+</body>
+
+</html>
+
+#########
+
+<?php
+
+    echo 'Hecho con while <br/>';
+    $i = 1;
+    while($i<=10){
+        echo $i . ' ';
+        $i++;
+    }
+
+    echo '<br/>';
+    echo 'Hecho con for <br/>';
+    for($i = 1;$i<=10;$i++){
+        echo $i . ' ';
+    }
+
+?>
+
+
+
+
+###########
+<?php
+
+class Persona {
+
+    private $nombre;
+    private $apellidos;
+    private $edad;
+
+    function __construct($nombre, $apellidos, $edad)
+    {
+        $this->nombre = $nombre;
+        $this->apellidos = $apellidos;
+        $this->edad = $edad;
+    }
+
+    function __get($propiedad)
+    {
+        if(property_exists($this, $propiedad)){
+            return $this->$propiedad;
+        }
+    }
+
+    function __set($propiedad, $valor){
+        if(property_exists($this, $propiedad)){
+            $this->$propiedad = $valor;
+        }
+    }
+
+    function mayorEdad(){
+        return $this->edad >= 18;
+    }
+
+    function nombreCompleto(){
+        return $this->nombre . " " . $this->apellidos;
+    }
+
+}
+
+$persona = new Persona("Fernando", "Ureña Gomez", 29);
+
+if($persona->mayorEdad()){
+    echo $persona->nombreCompleto(). " es mayor de edad";
+}else{
+    echo $persona->nombreCompleto(). " no es mayor de edad";
+}
+
+echo $persona->nombr2;
+?>
+
+
+
+########
